@@ -1,8 +1,9 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Sixth {
-    public static int [] sixth() {
+public class Task6 {
+
+    public static int [] task6() {
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.print("Введите длину массива: ");
             int length = scanner.nextInt();
@@ -28,7 +29,8 @@ public class Sixth {
             return array;
         }
     }
+    
     public static void main(String[] args) {
-        System.out.println("Массив после замены 0 на 1, 1 на 0:\n" + Arrays.toString(sixth()));
+        System.out.println("Массив после замены 0 на 1, 1 на 0:\n" + Arrays.toString(task6()));
     }
 }

@@ -1,8 +1,9 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Ninth {
-    public static int [] [] ninth () {
+public class Task9 {
+
+    public static int [] [] task9 () {
         System.out.println("Задайте размер квадратного двумерного целочисленного массива:");
         try (Scanner sc = new Scanner(System.in)) {
             int size = sc.nextInt();
@@ -19,7 +20,7 @@ public class Ninth {
     }
 
     public static void main(String[] args) {
-        int [] [] array = ninth();
+        int [] [] array = task9();
         for (int i = 0; i < array.length; i++) {
     System.out.println(Arrays.toString(array[i]));
         }
