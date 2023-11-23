@@ -60,7 +60,6 @@ public class AppData {
                 System.out.println("Ошибка вводных данных!");
             }
         }
-        
     }
 
     public String [] getHeader(){
