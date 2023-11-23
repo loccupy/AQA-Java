@@ -31,15 +31,15 @@ public class AppData {
         }
         String[] str2 = str.toString().split(";");
         int q = 0;
-        int[][] data1 = new int[x - 1][header.length];
+        data = new int[x - 1][header.length];
         for (int z = 0;z < x - 1;z++){
             int i = 0;
             for(i = 0;i < header.length;i++){
-                data1[z][i] = Integer.parseInt(str2[q]);
+                data[z][i] = Integer.parseInt(str2[q]);
                 q++;
             }
         }
-        data = data1;
+      //  data = data1;
     }
 
     public void writeFile1Csv () throws IOException {
