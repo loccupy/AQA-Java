@@ -39,7 +39,6 @@ public class AppData {
                 q++;
             }
         }
-      //  data = data1;
     }
 
     public void writeFile1Csv () throws IOException {
