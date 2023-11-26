@@ -47,7 +47,9 @@ public class ExceptionTraine {
     public static boolean checkStringForInt(String number) {
 
         for (int i = 0; i < number.length(); i++) {
-            if(number.charAt(i) == '-') continue;
+            if(number.charAt(i) == '-') {
+                continue;
+            }
             if (!Character.isDigit(number.charAt(i))) {
                 return false;
             }
