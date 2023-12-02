@@ -5,7 +5,7 @@ public class Main {
 
     public static void main(String[] args) {
         ArrayList<String> list = new ArrayList<>(List.of("Highload", "High", "Load", "Highload"));
-        System.out.println("\nИсходный массив:\n" + list + "\n");
+        System.out.println("\nИсходная коллекция:\n" + list + "\n");
         try {
             System.out.println("Cколько раз объект «High» встречается в коллекции:\n   " +
                     countHigh(list));
