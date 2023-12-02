@@ -3,6 +3,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Main {
+
     public static void main(String[] args) {
         ArrayList<String> list = new ArrayList<>(List.of("ac", "ad", "aa", "ab", "az"));
         System.out.println("\nИсходная коллекция: " + list);
