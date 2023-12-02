@@ -18,9 +18,9 @@ public class Main {
 
 
         double res = students.stream()
-                .filter(x -> x.gender.equals(Gender.MAN))
-                .map(num -> Double.parseDouble(String.valueOf(num.age())))
-                .reduce(0.0, Double::sum);
+                             .filter(x -> x.gender.equals(Gender.MAN))
+                             .map(num -> Double.parseDouble(String.valueOf(num.age())))
+                             .reduce(0.0, Double::sum);
         res /= students.stream().filter(x -> x.gender.equals(Gender.MAN)).count();
         System.out.printf("\nСредний возраст студентов мужского пола: %.4s лет.\n", res);
     }
