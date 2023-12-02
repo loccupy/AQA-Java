@@ -21,7 +21,7 @@ public class Main {
             return 0;
     }
 
-    public static String firstElement(List<String> list) {
+    public static Object firstElement(List<String> list) {
             return list.stream().findFirst().orElse(String.valueOf(0));
     }
 
