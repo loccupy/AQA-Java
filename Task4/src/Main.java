@@ -41,25 +41,6 @@ public class Main {
             this.gender = gender;
         }
 
-            @Override
-            public String toString() {
-                return "{" +
-                        "name='" + name + '\'' +
-                        ", age=" + age +
-                        ", gender=" + gender +
-                        '}';
-            }
-
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (!(o instanceof Student)) return false;
-            Student student = (Student) o;
-            return Objects.equals(name, student.name) &&
-                    Objects.equals(age, student.age) &&
-                    Objects.equals(gender, student.gender);
-        }
-
         public String name() {
             return name;
         }
@@ -70,6 +51,25 @@ public class Main {
 
         public Gender gender() {
             return gender;
+        }
+
+        @Override
+        public String toString() {
+            return "{" +
+                    "name='" + name + '\'' +
+                    ", age=" + age +
+                    ", gender=" + gender +
+                    '}';
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (!(o instanceof Student)) return false;
+            Student student = (Student) o;
+            return Objects.equals(name, student.name) &&
+                    Objects.equals(age, student.age) &&
+                    Objects.equals(gender, student.gender);
         }
 
         @Override
