@@ -10,7 +10,7 @@ public class Main {
                             countHigh(list));
         System.out.println("\nКакой элемент в коллекции находится на первом месте:\n   " +
                             firstElement(list));
-        System.out.print("\nКакой элемент в коллекции находится на последнем месте:\n   " +
+        System.out.println("\nКакой элемент в коллекции находится на последнем месте:\n   " +
                             lastElement(list));
     }
 
@@ -21,7 +21,7 @@ public class Main {
             return 0;
     }
 
-    public static Object firstElement(List<String> list) {
+    public static String firstElement(List<String> list) {
             return list.stream().findFirst().orElse(String.valueOf(0));
     }
 
