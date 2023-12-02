@@ -76,8 +76,5 @@ public class Main {
         public int hashCode() {
             return Objects.hash(name, age, gender);
         }
-
-
-        }
-
+    }
 }
