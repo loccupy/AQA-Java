@@ -5,8 +5,10 @@ import java.util.stream.Stream;
 public class Main {
 
     public static int getRandomNumber() {
+
         return (int) (Math.random()*500);
     }
+
     public static void main(String[] args) {
         List <Integer> list = new ArrayList<>();
         for(int i = 0; i < 10; i++){
