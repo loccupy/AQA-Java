@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-
         ArrayList <String> listOfLogins = new ArrayList<>();
         enterLogin(listOfLogins);
         System.out.println("Список логинов, начинающихся с 'f':");
