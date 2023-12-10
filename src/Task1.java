@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Main {
+public class Task1 {
 
     public static int getRandomNumber() {
         return (int) (Math.random()*500);

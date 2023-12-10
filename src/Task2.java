@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class Task2 {
 
     public static void main(String[] args) {
         ArrayList<String> list = new ArrayList<>(List.of("Highload", "High", "Load", "Highload"));
