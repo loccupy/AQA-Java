@@ -1,11 +1,14 @@
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.math.BigInteger;
 import java.util.ArrayList;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 
 public class FactorialTest {
 
@@ -13,7 +16,7 @@ public class FactorialTest {
 
     @BeforeMethod
     public void setUp() throws IOException {
-        File first = new File("src/test/TestResources/test.csv");
+        File first = new File("src/test/testResources/test.csv");
         String line;
         testList = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(first))) {
