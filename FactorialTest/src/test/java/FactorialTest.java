@@ -32,8 +32,8 @@ class FactorialTest {
         for (int i = 0; i <= 50; i++) {
             assertEquals(testList.get(i), fact.result(i));
             System.out.println(i + "!" + "-> " + "expected=" +
-                    testList.get(i) + "; actual=" +
-                    fact.result(i));
+                               testList.get(i) + "; actual=" +
+                               fact.result(i));
         }
         assertEquals(0, fact.result(-1));
     }
