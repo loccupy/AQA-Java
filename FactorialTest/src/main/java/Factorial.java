@@ -11,7 +11,7 @@ public class Factorial {
             return BigInteger.ONE;
         }
         return IntStream.rangeClosed(2, numb)
-                .mapToObj(BigInteger::valueOf)
-                .reduce(BigInteger::multiply).get();
+                        .mapToObj(BigInteger::valueOf)
+                        .reduce(BigInteger::multiply).get();
     }
 }
