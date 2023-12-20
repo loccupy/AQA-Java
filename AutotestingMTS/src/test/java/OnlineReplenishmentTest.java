@@ -10,7 +10,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-class MtsGetTest {
+class  OnlineReplenishmentTest {
 
     static WebDriver driver;
     static WebElement buttonCookieCancel;
