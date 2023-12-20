@@ -18,6 +18,7 @@ class OnlineReplenishmentTest {
     static WebDriver driver;
     static Actions builder;
     static WebElement buttonHeader;
+    static WebElement  buttonContinue;
     WebElement iframePayment;
     WebElement googleButton, yandexButton;
     WebElement iconVisa, iconMasterCard, iconBelkart, iconMirAndMaestro;
@@ -49,6 +50,7 @@ class OnlineReplenishmentTest {
         driver.findElement(By.className("cookie__cancel")).click();
         buttonHeader = driver.findElement(By.className("select__header"));
         listDropDown = driver.findElements(By.cssSelector("p.select__option"));
+        buttonContinue = driver.findElement(By.cssSelector(".button__default"));
         builder = new Actions(driver);
         builder.moveToElement(driver.findElement(By.cssSelector("div.pay__wrapper")));
     }
@@ -151,7 +153,7 @@ class OnlineReplenishmentTest {
         builder.click(payFormList.get(0)).sendKeys(enteredPhoneNumber)
                 .click(payFormList.get(1)).sendKeys(enteredSumStr)
                 .click(payFormList.get(2)).sendKeys("aqa@mail.com")
-                .click(driver.findElement(By.cssSelector(".button__default")))
+                .click(buttonContinue)
                 .build().perform();
         new WebDriverWait(driver, Duration.ofSeconds(5))
                 .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".bepaid-iframe")));
