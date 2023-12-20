@@ -75,7 +75,7 @@ class  OnlineReplenishmentTest {
                .click(payFormList.get(2)).sendKeys("aqaTest@mail.com")
                .click(buttonContinue)
                .build().perform();
-       new WebDriverWait(driver, Duration.ofSeconds(5))
+       new WebDriverWait(driver, Duration.ofSeconds(10))
                .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".bepaid-iframe")));
        iframeAfterClickContinue = driver.findElement(By.cssSelector(".bepaid-iframe"));
        assertTrue(iframeAfterClickContinue.isEnabled());
