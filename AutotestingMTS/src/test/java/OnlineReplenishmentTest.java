@@ -17,7 +17,10 @@ class  OnlineReplenishmentTest {
     WebElement iframeAfterClickContinue;
     WebElement moreAboutService;
     WebElement title;
+    WebElement buttonContinue;
     List<WebElement> imagesPartners;
+    List<WebElement> payFormList;
+    Actions builder;
 
     @BeforeAll
     static void setUp() {
@@ -59,16 +62,16 @@ class  OnlineReplenishmentTest {
        moreAboutService = driver.findElement(By.linkText("Подробнее о сервисе"));
        moreAboutService.click();
        assertEquals("https://www.mts.by/help/poryadok-oplaty-i-bezopasnost-internet-platezhey/"
-               ,driver.getCurrentUrl());
+               , driver.getCurrentUrl());
        driver.navigate().back();
    }
 
    @Test
    @Order(4)
    void testReplenishmentFields() {
-       Actions builder = new Actions(driver);
-       WebElement buttonContinue = driver.findElement(By.className("button__default"));
-       List<WebElement> payFormList = driver.findElements(By.cssSelector(".pay-form.opened .input-wrapper"));
+       builder = new Actions(driver);
+       buttonContinue = driver.findElement(By.className("button__default"));
+       payFormList = driver.findElements(By.cssSelector(".pay-form.opened .input-wrapper"));
        builder.moveToElement(driver.findElement(By.cssSelector(".pay__wrapper")))
                .click(payFormList.get(0)).sendKeys("297777777")
                .click(payFormList.get(1)).sendKeys("499.99")
