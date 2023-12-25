@@ -46,11 +46,8 @@ class OnlineReplenishmentTest {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://mts.by");
-        waitClickable(3, By.className("cookie__cancel"));
+        waitClickable(5, By.className("cookie__cancel"));
         driver.findElement(By.className("cookie__cancel")).click();
-        buttonHeader = driver.findElement(By.className("select__header"));
-        listDropDown = driver.findElements(By.cssSelector("p.select__option"));
-        buttonContinue = driver.findElement(By.cssSelector(".button__default"));
         builder = new Actions(driver);
         builder.moveToElement(driver.findElement(By.cssSelector("div.pay__wrapper")));
     }
@@ -58,8 +55,10 @@ class OnlineReplenishmentTest {
     @Test
     @Order(1)
     void testReplenishOptionDropDown() {
+        buttonHeader = driver.findElement(By.className("select__header"));
+        listDropDown = driver.findElements(By.cssSelector("p.select__option"));
         builder.click(buttonHeader).build().perform();
-        waitClickable(5, By.cssSelector(".select__list"));
+        waitClickable(3, By.cssSelector(".select__list"));
         assertAll(
                 "Проверяем корректность текста в выпадающем списке:",
                 () -> assertEquals("Услуги связи", listDropDown.get(0).getText()),
@@ -148,6 +147,7 @@ class OnlineReplenishmentTest {
         String enteredPhoneNumber = "297777777";
         Double enteredSum = 166.65;
         String enteredSumStr = String.format("%.6s", enteredSum);
+        buttonContinue = driver.findElement(By.cssSelector(".button__default"));
         payFormList = driver.findElements(By.cssSelector(locatorPayFormListStr));
         waitClickable(5, By.cssSelector(".button__default"));
         builder.click(payFormList.get(0)).sendKeys(enteredPhoneNumber)
